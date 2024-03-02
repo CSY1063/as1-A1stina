@@ -167,7 +167,18 @@ body{
   .register-link:active {
     box-shadow: 0 0 10px #ccc;
   }
+
+  h1{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 80px;
+  }
   
+  .skill-area{
+    display: grid;
+    grid-template-columns: auto;
+    padding: 0, 20px;
+  }
   @media (max-width: 480px) {
     .card {
       width: 100%;
