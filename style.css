@@ -176,9 +176,59 @@ body{
   
   .skill-area{
     display: grid;
-    grid-template-columns: auto;
+    flex-direction: column;
     padding: 0, 20px;
   }
+
+  .skill{
+    position: relative;
+    margin-top: 40px;
+  }
+
+  .skill-title{
+    margin-bottom: 10px;
+    font-size: 40px;
+  }
+
+  .bar{
+    width: 100%;
+    height: 40px;
+    z-index: -1;
+    border-radius: 100px;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  .html-skill{
+    background: blue;
+    height: 40px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+    overflow: hidden;
+  }
+
+  .percent{
+    font-size: 30px;
+  }
+
+  .html{
+    animation: html 2s;
+    width: 70%;
+  }
+
+  .css{
+    animation: js 2s;
+    width: 80%;
+  }
+
+  .js{
+    animation: js 2s;
+    width: 50%;
+  }
+
   @media (max-width: 480px) {
     .card {
       width: 100%;
