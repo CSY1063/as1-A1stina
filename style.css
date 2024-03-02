@@ -8,6 +8,7 @@
 body{
    
     color: #fff;
+    background: #0c1022;
 }
 
 .header{
@@ -176,12 +177,10 @@ img{
 
 /*STAR ANIMATION*/
 
-.night{
+.dark{
   position: absolute;
   width: 100%;
-  height: 100%;
-
-  
+  height: 100%; 
 }
 
 .star{
