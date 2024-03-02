@@ -178,6 +178,7 @@ body{
     display: grid;
     flex-direction: column;
     padding: 0, 20px;
+    margin: 0;
   }
 
   .skill{
@@ -199,7 +200,7 @@ body{
     background: rgba(255, 255, 255, 0.6);
   }
 
-  .html-skill{
+  .fill{
     background: blue;
     height: 40px;
     border-radius: 100px;
@@ -210,26 +211,6 @@ body{
     overflow: hidden;
   }
 
-  .css-skill{
-    background: blue;
-    height: 40px;
-    border-radius: 100px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 30px;
-    overflow: hidden;
-  }
-  .js-skill{
-    background: blue;
-    height: 40px;
-    border-radius: 100px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 30px;
-    overflow: hidden;
-  }
   .percent{
     font-size: 30px;
   }
@@ -277,6 +258,13 @@ body{
     to{
       width: 50%;
     }
+  }
+
+  @media only screen and (max-width: 75px){
+    .skill-area{
+      padding: 0, 5%;
+    }
+      
   }
 
   @media (max-width: 480px) {
