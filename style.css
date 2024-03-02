@@ -47,6 +47,10 @@ body{
 
 }
 
+
+
+/*SECTION AREA*/
+
 section{
   padding: 100px 10%;
 }
@@ -88,7 +92,7 @@ section{
 
 .info h5{
   font-weight: 600;
-  color: var(--text-color);
+  color: #f5f5f5;
 }
 
 .info span{
@@ -110,15 +114,55 @@ section{
   width: 150px;
   height: 100%;
   background: transparent;
-  color: var(--hover-color--);
-  border: 2px solid var(--hover-color--);
-  font-size: var(--text-color);
+  color: #f5f5f5;
+  border: 2px solid #12f7ff;
+  font-size: #f5f5f5;
   letter-spacing: 1px;
   font-weight: 600;
+  overflow: hidden;
+  transition: .6s;
+  box-shadow: 0 0 .8rem #12f7ff;
+  z-index: 1;
+  position: relative;
+}
+
+.btn-box a:hover{
+  color: #250821;
+}
+
+.contents .btn-box a::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: o;
+  height: 100%;
+  background: #12f7ff;
+  width: 0;
+  z-index: -1;
+  transition: .6s;
+}
+
+.contents .btn-box a:hover::before{
+  width: 100%;
+}
+
+.btn-box a:nth-child(1){
+  background: #12f7ff;
+  color: #0c1022;
+}
+
+.btn-box a:nth-child(1)::before{
+  background-color: #0c1022;
+}
+
+.btn-box a:nth-child(1):hover{
+  background-color: #12f7ff;
 }
 
 
 
+
+/*FORM AREAR*/
 
 .container {
     display: flex;
