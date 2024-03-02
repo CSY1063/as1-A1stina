@@ -124,6 +124,7 @@ section{
   box-shadow: 0 0 .8rem #12f7ff;
   z-index: 1;
   position: relative;
+  text-decoration: none;
 }
 
 .btn-box a:hover{
@@ -159,6 +160,19 @@ section{
   background-color: #12f7ff;
 }
 
+.image{
+  position: relative;
+}
+
+.img-box{
+  text-align: center;
+}
+
+img{
+  width: 50rem;
+  height: 35rem;
+  
+}
 
 
 
