@@ -117,7 +117,6 @@ section{
   background: transparent;
   color: #f5f5f5;
   border: 2px solid #12f7ff;
-  font-size: #f5f5f5;
   letter-spacing: 1px;
   font-weight: 600;
   overflow: hidden;
@@ -136,7 +135,7 @@ section{
   content: "";
   position: absolute;
   top: 0;
-  left: o;
+  left: 0;
   height: 100%;
   background: #12f7ff;
   width: 0;
@@ -175,7 +174,8 @@ img{
   
 }
 
-/*STAR ANIMATION*/
+
+/*STAR ANIMATION
 
 .dark{
   position: absolute;
@@ -321,6 +321,8 @@ img{
   animation-delay: 2.2s;
 }
 
+*/
+
 
 /*FORM AREAR*/
 
@@ -339,7 +341,7 @@ img{
   }
   
   .card {
-    width: 300px;
+    width: 700px;
     background-color: #1e213a;
     padding: 20px;
     border-radius: 10px;
@@ -623,4 +625,12 @@ img{
       width: 100%;
       max-width: 300px;
     }
+  }
+
+  /*FOOTER AREA*/
+
+  footer{
+    display: grid;
+    grid-area: footer;
+    text-align: center;
   }
