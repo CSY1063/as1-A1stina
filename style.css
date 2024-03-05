@@ -6,10 +6,67 @@
 }
 
 body{
+  color: #fff;
+  background: #0c1022;
    
-    color: #fff;
-    background: #0c1022;
+    box-sizing: border-box;
 }
+
+.background{
+  background: linear-gradient(132deg, #000046, #1CB5E0, #212335);
+  background-size: 400%;
+  animation: gradient 15s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.square{
+  position: absolute;
+  top: 80vh;
+  left: 45vh;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #d7d4e4;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: square 12s ease-in forwards infinite;
+}
+
+.square:nth-child(2n){
+  border-color: #fff;
+}
+
+.square:nth-child(2){
+  animation-delay: 2s;
+  left: 25vh;
+  top: 40vh;
+}
+
+.square:nth-child(3){
+  animation-delay: 4s;
+  left: 75vh;
+  top: 50vh;
+}
+
+.square:nth-child(4){
+  animation-delay: 6s;
+  left: 90vh;
+  top: 10vh;
+}
+
+.square:nth-child(5){
+  animation-delay: 8s;
+  left: 10vh;
+  top: 50vh;
+}
+
+.square:nth-child(3){
+  animation-delay: 4s;
+  left: 75vh;
+  top: 50vh;
+}
+
+
 
 .header{
     position: fixed;
@@ -43,10 +100,54 @@ body{
 .navbar a.it,
 .navbar a:hover{
     background: linear-gradient(45deg, #f06, #3cf);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-
+   
 }
+
+/*HAMBURGER*/
+
+.Nor{
+  height: 0.8em;
+  width: 1.25em;
+  display: block;
+  border-top: 0.2em solid white;
+  border-radius: 0.2em;
+  border-bottom: 0.2em solid white;
+  visibility: hidden;
+}
+
+.Nor::before {
+  content: '';
+  position: absolute;
+  width: 1.25em;
+  margin-top: 0.3em;
+  border-top: 0.2em solid #fff;}
+
+  .navbar{
+    display: block;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100vh;
+  }
+
+  .navb{
+    display: none;
+
+  }
+
+  @media screen and (max-width: 750px) {
+    .navbar{
+      display: none;
+    }
+    
+    .navb{
+      display: block;
+      visibility: visible;
+    }
+    
+  }
 
 
 
@@ -75,12 +176,12 @@ section{
 
 .contents h1{
     font-size: 50px;
-    font-weight: 600px;
+    font-weight: 600;
 }
 
 .contents h3{
     font-size: 30px;
-    font-weight: 600px;
+    font-weight: 600;
 }
 
 .info{
@@ -102,6 +203,7 @@ section{
 
 .contents .btn-box{
   display: flex;
+  margin-top: 20px;
   justify-content: space-between;
   width: 320px;
   height: 45px;
@@ -128,7 +230,7 @@ section{
 }
 
 .btn-box a:hover{
-  color: #250821;
+  color: #f5f5f5;
 }
 
 .contents .btn-box a::before{
@@ -149,7 +251,7 @@ section{
 
 .btn-box a:nth-child(1){
   background: #12f7ff;
-  color: #0c1022;
+  color: #f5f5f5;
 }
 
 .btn-box a:nth-child(1)::before{
@@ -162,166 +264,22 @@ section{
 
 .image{
   position: relative;
+  justify-content: center;
+   
 }
 
 .img-box{
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 img{
-  width: 50rem;
-  height: 35rem;
+  width: 30rem;
+  height: 30rem;
   
 }
 
-
-/*STAR ANIMATION
-
-.dark{
-  position: absolute;
-  width: 100%;
-  height: 100%; 
-}
-
-.star{
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 4px;
-  width: 100px;
-  background: linear-gradient(-45deg, #5f91ff, rgba(0, 0, 255, 0));
-  border-radius: 999px;
-  filter: drop-shadow(0 0 6px #6998ff);
-  animation: tail 3s ease-in-out infinite, falling 3s ease-in-out infinite;
-}
-
-@keyframes tail{
-  0%{
-    width: 0px;
-  }
-
-  30%{
-    width: 100px;
-  }
-
-  100%{
-    width: 0;
-  }
-}
-
-@keyframes falling{
-  0%{
-    transform: translateX(0);
-  }
-
-  100%{
-    transform: translateX(300px);
-  }
-  
-}
-
-.star::before, .star::after{
-  content: "";
-  position: absolute;
-  top: calc(50% - 2px);
-  right: 0;
-  height: 4px;
-  width: 30px;
-  background: linear-gradient(-45deg, rgba(0, 0, 255,0), #5f91ff, rgba(0, 0, 255,0));
-  border-radius: 100%;
-  transform: translateX(50%) rotateZ(45deg);
-  animation: shining 3s ease-in-out infinite;
-}
-
-@keyframes shining{
-  0%{
-    width: 0px;
-  }
-
-  50%{
-    width: 30px;
-  }
-
-  100%{
-    width: 0;
-  }
-}
-
-.star::after{
-  transform: translateX(50%) rotateZ(-45deg);
-}
-
-.star:nth-child(1){
-  top: calc(50% - 100px);
-  left: calc(50% - 250px);
-  animation-delay: 1s;
-}
-
-.star:nth-child(1)::before, .star:nth-child(1)::after{
-  animation-delay: 1s;
-}
-
-.star:nth-child(2){
-  top: calc(50% - 50px);
-  left: calc(50% - 200px);
-  animation-delay: 1.2s;
-}
-
-.star:nth-child(2)::before, .star:nth-child(2)::after{
-  animation-delay: 1.2s;
-}
-
-.star:nth-child(3){
-  top: calc(50% - 0px);
-  left: calc(50% - 150px);
-  animation-delay: 1.4s;
-}
-
-.star:nth-child(3)::before, .star:nth-child(3)::after{
-  animation-delay: 1.4s;
-}
-
-.star:nth-child(4){
-  top: calc(50% - -50px);
-  left: calc(50% - 200px);
-  animation-delay: 1.6s;
-}
-
-.star:nth-child(4)::before, .star:nth-child(4)::after{
-  animation-delay: 1.6s;
-}
-
-.star:nth-child(5){
-  top: calc(50% - -100px);
-  left: calc(50% - 250px);
-  animation-delay: 1.8s;
-}
-
-.star:nth-child(5)::before, .star:nth-child(5)::after{
-  animation-delay: 1.8s;
-}
-
-.star:nth-child(6){
-  top: calc(50% - -150px);
-  left: calc(50% - 200px);
-  animation-delay: 2s;
-}
-
-.star:nth-child(6)::before, .star:nth-child(6)::after{
-  animation-delay: 2s;
-}
-
-.star:nth-child(7){
-  top: calc(50% - -200px);
-  left: calc(50% - 250px);
-  animation-delay: 2.2s;
-}
-
-.star:nth-child(7)::before, .star:nth-child(7)::after{
-  animation-delay: 2.2s;
-}
-
-*/
 
 
 /*FORM AREAR*/
@@ -436,8 +394,9 @@ img{
     text-align: center;
     padding-bottom: 50px;
     color: #fff;
-    text-shadow: 0 5px 10px rgba(0, 0, 0, 2);
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     font-size: 50px;
+    margin-top: 80px;
   }
 
   .con .box-container{
@@ -447,9 +406,9 @@ img{
   }
 
 .con .box-container .box{
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  background: #19d4ca;
+  background: transparent;
   text-align: center;
   padding: 30px 20px;
 }
@@ -462,7 +421,7 @@ img{
 .con .box-container .box h3{
   color: #444;
   font-size: 22px;
-  padding: 10px o;
+  padding: 10px 0;
 }
 
 .con .box-container .box p{
@@ -478,6 +437,8 @@ img{
   font-size: 17px;
   border-radius: 5px;
   padding: 8px 25px;
+  text-decoration: none;
+  color: #f5f5f5;
 }
 
 .con .box-container .box:hover{
@@ -599,7 +560,7 @@ img{
     }
 
     to{
-      width: 50%;
+      width: 30%;
     }
   }
 
@@ -609,13 +570,13 @@ img{
     }
 
     to{
-      width: 50%;
+      width: 40%;
     }
   }
 
   @media only screen and (max-width: 75px){
     .skill-area{
-      padding: 0, 5%;
+      padding: 0.5%;
     }
       
   }
