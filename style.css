@@ -518,8 +518,6 @@ form{
 }
 
 
-
-
   /*SKILLS AREAR*/
 
 
@@ -590,6 +588,22 @@ form{
   }
 }
 
+.video{
+  justify-content: center;
+  align-items: center;
+  padding-left: 500px;
+  padding-top: 200px;
+}
+
+
+/*REPORT*/
+
+.word{
+  justify-content: center;
+  align-items: center;
+  padding-left: 500px;
+  padding-top: 200px;
+}
 
  
 
@@ -597,7 +611,6 @@ form{
 
   footer{
     background: linear-gradient(132deg, #3D374F, #212941, #271A27);
-    width: 100%;
 
   }
 
