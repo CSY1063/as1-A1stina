@@ -155,7 +155,7 @@ header input:checked ~ ul{
     position: fixed;
     align-items: center;
     top: 0;
-    right: -300;
+    right: -300px;
     background: transparent;
     width: 300px;
     height: 100%;
