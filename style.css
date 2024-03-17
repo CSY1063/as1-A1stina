@@ -542,7 +542,7 @@ img{
 .con .box-container .box{
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  background: transparent;
+  background: rgb(223, 221, 221);
   text-align: center;
   padding: 30px 20px;
 }
